@@ -105,6 +105,19 @@ public class GewinnView extends JFrame {
         gesamtPunkte.setText(String.valueOf(punkte));
     }
 
+    private void setzeLabelFarbe(Color farbe){
+        rundenErgebnis.setBackground(farbe);
+        gesamtPunkte.setBackground(farbe);
+    }
+
+    public void faerbeLabels(boolean gewonnen){
+        if(gewonnen){
+            setzeLabelFarbe(Color.GREEN);
+        }else{
+            setzeLabelFarbe(Color.RED);
+        }
+    }
+
     public void zeigeStartPunkte(int punkte) {
         gesamtPunkte.setText("Gesamtpunkte: " + punkte);
     }
@@ -113,6 +126,7 @@ public class GewinnView extends JFrame {
         spielerZahl.setText("");
         computerZahl.setText("");
         rundenErgebnis.setText(HINWEIS);
+        setzeLabelFarbe(Color.WHITE);
     }
 
     public void zeigeFehler(String text) {
