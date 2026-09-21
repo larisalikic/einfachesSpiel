@@ -28,4 +28,27 @@ public class GewinnModel {
         computerZahl = random.nextInt(9) + 1;
     }
 
+    public void berechneRunde(int spielerZahl) {
+        this.spielerZahl = spielerZahl;
+
+        if (spielerZahl == computerZahl) {
+            rundenErgebnis = 20;
+        } else if (spielerZahl == computerZahl + 1 || spielerZahl == computerZahl - 1) {
+            rundenErgebnis = 5;
+        } else {
+            rundenErgebnis = -10;
+        }
+
+        gesamtPunkte += rundenErgebnis;
+    }
+
+    public boolean hatGewonnen(){
+        return gesamtPunkte >= 100;
+    }
+
+    public boolean hatVerloren(){
+        return gesamtPunkte <= 0;
+    }
+
+
 }
