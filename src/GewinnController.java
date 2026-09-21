@@ -26,9 +26,15 @@ public class GewinnController {
         view.zeigeComputerZahl(model.getComputerZahl());
         view.zeigeRundenErgebnis(erstelleRundenText());
         view.zeigeGesamtPunkte(model.getGesamtPunkte());
+
+        view.zeigeGesamtPunkte(model.getGesamtPunkte());
+        view.setSpielerEingabeAktiv(false);
+        view.setNochEinmalAktiv(true);
     }
 
     public void neueRunde() {
+        view.setSpielerEingabeAktiv(true);
+        view.setNochEinmalAktiv(false);
         view.loescheRunde();
     }
 
