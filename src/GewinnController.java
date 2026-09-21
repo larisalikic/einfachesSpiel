@@ -1,3 +1,14 @@
+/**
+ * Controller des Zahlen-Gewinnspiels.
+ * Verbindet Model und View. Er liest und prüft die Eingabe des Spielers,
+ * lässt das Model die Runde berechnen und aktualisiert danach die View.
+ * Nach einer Runde sperrt er das Eingabefeld, bei "Noch einmal!" gibt er es
+ * wieder frei.
+ *
+ * @author Larisa Likic
+ * @version 21.9.2026
+ */
+
 public class GewinnController {
 
     private GewinnModel model;

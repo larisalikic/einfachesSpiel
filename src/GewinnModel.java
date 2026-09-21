@@ -1,5 +1,16 @@
 import java.util.Random;
 
+/**
+ * Model des Zahlen-Gewinnspiels.
+ * Speichert die Punkte und die Zahlen der aktuellen Runde, ermittelt die
+ * Computerzahl und berechnet das Rundenergebnis. Der Spieler startet mit
+ * 30 Punkten, bei 100 oder mehr hat er gewonnen, bei 0 oder weniger verloren.
+ *
+ * @author Larisa Likic
+ * @version 21.9.2026
+ */
+
+
 public class GewinnModel {
 
     private int gesamtPunkte;

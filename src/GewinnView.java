@@ -3,6 +3,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * View des Zahlen-Gewinnspiels.
+ * Zeigt Rundenergebnis, Gesamtpunkte und die Zahlen von Spieler und Computer an
+ * und färbt die Labels grün oder rot. Die Klasse enthält keine Spiellogik, sie
+ * leitet Enter und den Button "Noch einmal!" an den Controller weiter.
+ *
+ * @author Larisa Likic
+ * @version 21.9.2026
+ */
+
 public class GewinnView extends JFrame {
 
     private static final String HINWEIS = "Tippe eine Zahl von 1 bis 9";
