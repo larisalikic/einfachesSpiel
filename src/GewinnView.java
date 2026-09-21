@@ -12,6 +12,51 @@ public class GewinnView extends JFrame {
     private JTextField computerZahl;
     private JButton nochEinmal;
 
+    public GewinnView() {
+        setTitle("Zahlen-Gewinnspiel (v1.0)");
+        setSize(530, 330);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        rundenErgebnis = erstelleAnzeigeLabel();
+        gesamtPunkte = erstelleAnzeigeLabel();
+
+        spielerZahl = erstelleZahlenFeld();
+        computerZahl = erstelleZahlenFeld();
+        computerZahl.setEditable(false);
+        computerZahl.setBackground(Color.WHITE);
+
+        nochEinmal = new JButton("Noch einmal!");
+
+        JPanel oben = new JPanel(new GridLayout(2, 2, 12, 2));
+        oben.add(erstelleUeberschrift("Rundenergebnis:"));
+        oben.add(erstelleUeberschrift("Gesamtpunkte:"));
+        oben.add(rundenErgebnis);
+        oben.add(gesamtPunkte);
+
+        JPanel ueberschriften = new JPanel(new GridLayout(1, 2, 12, 0));
+        ueberschriften.add(erstelleUeberschrift("Deine Zahl:"));
+        ueberschriften.add(erstelleUeberschrift("Computer:"));
+
+        JPanel textfelder = new JPanel(new GridLayout(1, 2, 12, 0));
+        textfelder.add(spielerZahl);
+        textfelder.add(computerZahl);
+
+        JPanel mitte = new JPanel(new BorderLayout(5, 5));
+        mitte.add(ueberschriften, BorderLayout.NORTH);
+        mitte.add(textfelder, BorderLayout.CENTER);
+
+        JPanel unten = new JPanel();
+        unten.add(nochEinmal);
+
+        JPanel hauptPanel = new JPanel(new BorderLayout(5, 5));
+        hauptPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        hauptPanel.add(oben, BorderLayout.NORTH);
+        hauptPanel.add(mitte, BorderLayout.CENTER);
+        hauptPanel.add(unten, BorderLayout.SOUTH);
+
+        add(hauptPanel);
+    }
+
     private JLabel erstelleUeberschrift(String text) {
         return new JLabel(text, SwingConstants.CENTER);
     }
