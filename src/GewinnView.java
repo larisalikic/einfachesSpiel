@@ -26,6 +26,7 @@ public class GewinnView extends JFrame {
         computerZahl.setBackground(Color.WHITE);
 
         nochEinmal = new JButton("Noch einmal!");
+        nochEinmal.setEnabled(false);
 
         JPanel oben = new JPanel(new GridLayout(2, 2, 12, 2));
         oben.add(erstelleUeberschrift("Rundenergebnis:"));
@@ -117,5 +118,13 @@ public class GewinnView extends JFrame {
 
     public void zeigeFehler(String text) {
         JOptionPane.showMessageDialog(this, text);
+    }
+
+    public void setSpielerEingabeAktiv(boolean aktiv){
+        spielerZahl.setEnabled(aktiv);
+    }
+
+    public void setNochEinmal(boolean aktiv){
+        nochEinmal.setEnabled(aktiv);
     }
 }
