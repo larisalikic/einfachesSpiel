@@ -124,7 +124,7 @@ public class GewinnView extends JFrame {
         spielerZahl.setEnabled(aktiv);
     }
 
-    public void setNochEinmal(boolean aktiv){
+    public void setNochEinmalAktiv(boolean aktiv){
         nochEinmal.setEnabled(aktiv);
     }
 }
